@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresques Murales - Exemples Visuels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.8em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+        
+        .section-divider {
+            text-align: center;
+            margin: 50px 0 30px 0;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .fresco-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .fresco-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .fresco-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: white;
+        }
+        
+        .fresco-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .fresco-subtitle {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+        
+        .fresco-image {
+            width: 100%;
+            height: 350px;
+            display: block;
+            background: #f5f5f5;
+        }
+        
+        .fresco-info {
+            padding: 20px;
+        }
+        
+        .fresco-description {
+            color: #34495e;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 0.95em;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        
+        .color-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .color-section h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .palette-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .palette-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .color-display {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .color-box {
+            height: 90px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .color-code {
+            font-size: 0.75em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        
+        .usage-info {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.85em;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 FRESQUES MURALES - Exemples Visuels Détaillés</h1>
+        
+        <div class="section-divider">
+            <div class="section-badge">🥽 SALLE 1 : VR/AR & Premiers Secours</div>
+        </div>
+        
+        <div class="gallery">
+            <!-- Fresque 1 Salle 1 -->
+            <div class="fresco-card">
+                <div class="fresco-header">
+                    <div class="fresco-title">Le Pont Technologique</div>
+                    <div class="fresco-subtitle">Dimension : 3m × 2m</div>
+                </div>
+                <canvas class="fresco-image" id="canvas1"></canvas>
+                <div class="fresco-info">
+                    <p class="fresco-description">
+                        Fusion harmonieuse entre un casque VR émettant des hologrammes et un cœur médical. Les lignes de connexion animées symbolisent le lien entre innovation technologique et compassion humaine.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Innovation</span>
+                        <span class="tag">Futuriste</span>
+                        <span class="tag">Bienveillant</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fresque 2 Salle 1 -->
+            <div class="fresco-card">
+                <div class="fresco-header">
+                    <div class="fresco-title">L'Arbre Numérique de Vie</div>
+                    <div class="fresco-subtitle">Dimension : 2.5m × 2m</div>
+                </div>
+                <canvas class="fresco-image" id="canvas2"></canvas>
+                <div class="fresco-info">
+                    <p class="fresco-description">
+                        Un arbre dont le tronc est un circuit imprimé avec composants électroniques. Les branches sont des bulles de réalité augmentée contenant symboles médicaux et technologiques avec pixels flottants animés.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Organique</span>
+                        <span class="tag">Technologique</span>
+                        <span class="tag">Symbiotique</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fresque 3 Salle 1 -->
+            <div class="fresco-card">
+                <div class="fresco-header">
+                    <div class="fresco-title">La Main Augmentée</div>
+                    <div class="fresco-subtitle">Dimension : 2.5m × 2m</div>
+                </div>
+                <canvas class="fresco-image" id="canvas3"></canvas>
+                <div class="fresco-info">
+                    <p class="fresco-description">
+                        Une main humaine entourée d'interfaces de réalité augmentée : données vitales holographiques, symboles médicaux flottants et particules numériques. Symbolise l'interaction entre humain et technologie.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Humain</span>
+                        <span class="tag">Interactif</span>
+                        <span class="tag">Moderne</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Palettes Salle 1 -->
+        <div class="color-section">
+            <h2>🎨 Palettes de Couleurs - Salle 1</h2>
+            <div class="palette-grid">
+                <div class="palette-card">
+                    <div class="palette-name">Palette "Tech Serein"</div>
+                    <div class="color-display">
+                        <div class="color-box" style="background: #E8F4F8;">
+                            Bleu Clair
+                            <span class="color-code">#E8F4F8</span>
+                        </div>
+                        <div class="color-box" style="background: #4A90E2;">
+                            Bleu Tech
+                            <span class="color-code">#4A90E2</span>
+                        </div>
+                        <div class="color-box" style="background: #F8F9FA; color: #333;">
+                            Blanc Cassé
+                            <span class="color-code">#F8F9FA</span>
+                        </div>
+                        <div class="color-box" style="background: #FF6B9D;">
+                            Rose Accent
+                            <span class="color-code">#FF6B9D</span>
+                        </div>
+                    </div>
+                    <div class="usage-info">
+                        <strong>Usage :</strong> Murs principaux en bleu clair apaisant, accents bleu technologique pour fresques, touches rose pour dynamiser.
+                    </div>
+                </div>
+                
+                <div class="palette-card">
+                    <div class="palette-name">Palette "Futur Bienveillant"</div>
+                    <div class="color-display">
+                        <div class="color-box" style="background: #F0F4F8; color: #333;">
+                            Gris Clair
+                            <span class="color-code">#F0F4F8</span>
+                        </div>
+                        <div class="color-box" style="background: #667EEA;">
+                            Violet Digital
+                            <span class="color-code">#667EEA</span>
+                        </div>
+                        <div class="color-box" style="background: #FFFFFF; color: #333;">
+                            Blanc Pur
+                            <span class="color-code">#FFFFFF</span>
+                        </div>
+                        <div class="color-box" style="background: #26D0CE;">
+                            Cyan Moderne
+                            <span class="color-code">#26D0CE</span>
+                        </div>
+                    </div>
+                    <div class="usage-info">
+                        <strong>Usage :</strong> Base gris très clair, violet pour zones de travail VR, cyan pour éléments interactifs et signalétique.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-divider">
+            <div class="section-badge">🏗️ SALLE 2 : Technologie & Architecture</div>
+        </div>
+        
+        <div class="gallery">
+            <!-- Fresque 1 Salle 2 -->
+            <div class="fresco-card">
+                <div class="fresco-header">
+                    <div class="fresco-title">L'Évolution Architecturale</div>
+                    <div class="fresco-subtitle">Dimension : 4m × 2m (panoramique)</div>
+                </div>
+                <canvas class="fresco-image" id="canvas4"></canvas>
+                <div class="fresco-info">
+                    <p class="fresco-description">
+                        Frise chronologique monumentale : pyramides égyptiennes, temples romains, gratte-ciels modernes et structures organiques futuristes. Chaque époque avec sa palette unique sur une timeline.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Historique</span>
+                        <span class="tag">Évolution</span>
+                        <span class="tag">Panoramique</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fresque 2 Salle 2 -->
+            <div class="fresco-card">
+                <div class="fresco-header">
+                    <div class="fresco-title">La Mécanique Créative</div>
+                    <div class="fresco-subtitle">Dimension : 3m × 2m</div>
+                </div>
+                <canvas class="fresco-image" id="canvas5"></canvas>
+                <div class="fresco-info">
+                    <p class="fresco-description">
+                        Engrenages colorés interconnectés symbolisant l'ingénierie créative. Grand engrenage central orange entouré d'engrenages bleus et verts animés, avec circuits et boulons industriels.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Mécanique</span>
+                        <span class="tag">Dynamique</span>
+                        <span class="tag">Créatif</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fresque 3 Salle 2 -->
+            <div class="fresco-card">
+                <div class="fresco-header">
+                    <div class="fresco-title">Le Plan Vivant</div>
+                    <div class="fresco-subtitle">Dimension : 3m × 2m</div>
+                </div>
+                <canvas class="fresco-image" id="canvas6"></canvas>
+                <div class="fresco-info">
+                    <p class="fresco-description">
+                        Plan architectural 3D isométrique avec annotations techniques, cotes, symboles d'ingénierie et outils de mesure. Mélange de précision technique et esthétique contemporaine.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Technique</span>
+                        <span class="tag">Précis</span>
+                        <span class="tag">Professionnel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Palettes Salle 2 -->
+        <div class="color-section">
+            <h2>🎨 Palettes de Couleurs - Salle 2</h2>
+            <div class="palette-grid">
+                <div class="palette-card">
+                    <div class="palette-name">Palette "Atelier Moderne"</div>
+                    <div class="color-display">
+                        <div class="color-box" style="background: #F5F5F5; color: #333;">
+                            Gris Lumière
+                            <span class="color-code">#F5F5F5</span>
+                        </div>
+                        <div class="color-box" style="background: #2C3E50;">
+                            Bleu Ardoise
+                            <span class="color-code">#2C3E50</span>
+                        </div>
+                        <div class="color-box" style="background: #FFFFFF; color: #333;">
+                            Blanc
+                            <span class="color-code">#FFFFFF</span>
+                        </div>
+                        <div class="color-box" style="background: #E67E22;">
+                            Orange Indus.
+                            <span class="color-code">#E67E22</span>
+                        </div>
+                    </div>
+                    <div class="usage-info">
+                        <strong>Usage :</strong> Murs gris clair pour luminosité, accents ardoise pour zones de concentration, orange pour dynamiser et marquer les fresques.
+                    </div>
+                </div>
+                
+                <div class="palette-card">
+                    <div class="palette-name">Palette "Ingénieur Inspiré"</div>
+                    <div class="color-display">
+                        <div class="color-box" style="background: #ECF0F1; color: #333;">
+                            Gris Perle
+                            <span class="color-code">#ECF0F1</span>
+                        </div>
+                        <div class="color-box" style="background: #1976D2;">
+                            Bleu Technique
+                            <span class="color-code">#1976D2</span>
+                        </div>
+                        <div class="color-box" style="background: #FFFFFF; color: #333;">
+                            Blanc
+                            <span class="color-code">#FFFFFF</span>
+                        </div>
+                        <div class="color-box" style="background: #27AE60;">
+                            Vert Innovation
+                            <span class="color-code">#27AE60</span>
+                        </div>
+                    </div>
+                    <div class="usage-info">
+                        <strong>Usage :</strong> Base gris perle moderne, bleu technique pour plans et schémas, vert pour éléments innovants et écologiques.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Fonction pour dessiner la fresque 1 - Le Pont Technologique
+        function drawFresco1() {
+            const canvas = document.getElementById('canvas1');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 600;
+            canvas.height = 350;
+            
+            // Fond dégradé
+            const bgGrad = ctx.createLinearGradient(0, 0, 600, 350);
+            bgGrad.addColorStop(0, '#667eea');
+            bgGrad.addColorStop(0.5, '#764ba2');
+            bgGrad.addColorStop(1, '#f093fb');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, 600, 350);
+            
+            // Casque VR
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+            ctx.beginPath();
+            ctx.ellipse(220, 175, 90, 75, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Lentilles
+            const lensGrad1 = ctx.createRadialGradient(190, 170, 10, 190, 170, 35);
+            lensGrad1.addColorStop(0, '#00f2fe');
+            lensGrad1.addColorStop(1, '#4facfe');
+            ctx.fillStyle = lensGrad1;
+            ctx.beginPath();
+            ctx.ellipse(190, 170, 35, 42, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            const lensGrad2 = ctx.createRadialGradient(250, 170, 10, 250, 170, 35);
+            lensGrad2.addColorStop(0, '#00f2fe');
+            lensGrad2.addColorStop(1, '#4facfe');
+            ctx.fillStyle = lensGrad2;
+            ctx.beginPath();
+            ctx.ellipse(250, 170, 35, 42, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Bandeau
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.roundRect(130, 160, 180, 15, 7);
+            ctx.fill();
+            
+            // Éléments holographiques
+            ctx.strokeStyle = '#00f2fe';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.arc(120, 110, 25, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            ctx.strokeStyle = '#4facfe';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(120, 110, 18, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Carré holographique
+            ctx.save();
+            ctx.translate(400, 200);
+            ctx.rotate(Math.PI / 4);
+            ctx.fillStyle = 'rgba(74, 172, 254, 0.6)';
+            ctx.fillRect(-22, -22, 45, 45);
+            ctx.strokeStyle = '#00f2fe';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(-22, -22, 45, 45);
+            ctx.restore();
+            
+            // Cœur médical
+            ctx.save();
+            ctx.translate(470, 175);
+            const heartGrad = ctx.createLinearGradient(-52, -40, 0, 60);
+            heartGrad.addColorStop(0, '#ff6b9d');
+            heartGrad.addColorStop(1, '#f5576c');
+            ctx.fillStyle = heartGrad;
+            ctx.beginPath();
+            ctx.moveTo(0, -10);
+            ctx.bezierCurveTo(0, -25, -15, -40, -30, -40);
+            ctx.bezierCurveTo(-48, -40, -52, -25, -52, -10);
+            ctx.bezierCurveTo(-52, 15, -26, 40, -26, 60);
+            ctx.bezierCurveTo(-26, 40, 0, 15, 0, -10);
+            ctx.fill();
+            
+            // Croix
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(-31, -15, 10, 30);
+            ctx.fillRect(-36, -10, 20, 20);
+            ctx.restore();
+            
+            // Ligne de connexion
+            ctx.setLineDash([10, 10]);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(280, 175);
+            ctx.lineTo(418, 175);
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+        
+        // Fonction pour dessiner la fresque 2 - L'Arbre Numérique
+        function drawFresco2() {
+            const canvas = document.getElementById('canvas2');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 600;
+            canvas.height = 350;
+            
+            // Fond dégradé
+            const bgGrad = ctx.createLinearGradient(0, 0, 0, 350);
+            bgGrad.addColorStop(0, '#a8edea');
+            bgGrad.addColorStop(0.5, '#fed6e3');
+            bgGrad.addColorStop(1, '#a8e6cf');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, 600, 350);
+            
+            // Racines
+            ctx.strokeStyle = '#34495e';
+            ctx.lineWidth = 6;
+            ctx.beginPath();
+            ctx.moveTo(280, 310);
+            ctx.quadraticCurveTo(220, 320, 180, 330);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(320, 310);
+            ctx.quadraticCurveTo(380, 320, 420, 330);
+            ctx.stroke();
+            
+            // Tronc (circuit imprimé)
+            const trunkGrad = ctx.createLinearGradient(260, 0, 340, 0);
+            trunkGrad.addColorStop(0, '#2c3e50');
+            trunkGrad.addColorStop(0.5, '#34495e');
+            trunkGrad.addColorStop(1, '#2c3e50');
+            ctx.fillStyle = trunkGrad;
+            ctx.beginPath();
+            ctx.roundRect(260, 200, 80, 120, 8);
+            ctx.fill();
+            
+            // Circuits sur le tronc
+            ctx.strokeStyle = '#27ae60';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(270, 220);
+            ctx.lineTo(325, 220);
+            ctx.stroke();
+            
+            ctx.fillStyle = '#27ae60';
+            ctx.beginPath();
+            ctx.arc(305, 220, 4, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.strokeStyle = '#3498db';
+            ctx.beginPath();
+            ctx.moveTo(275, 245);
+            ctx.lineTo(320, 245);
+            ctx.stroke();
+            
+            ctx.fillStyle = '#e74c3c';
+            ctx.fillRect(290, 263, 8, 8);
+            
+            // Branche gauche (bubble bleu)
+            const bubbleGrad1 = ctx.createRadialGradient(180, 130, 10, 180, 130, 45);
+            bubbleGrad1.addColorStop(0, '#5dade2');
+            bubbleGrad1.addColorStop(1, '#3498db');
+            ctx.fillStyle = bubbleGrad1;
+            ctx.beginPath();
+            ctx.arc(180, 130, 45, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(165, 122, 12, 12);
+            ctx.fillRect(183, 122, 12, 12);
+            
+            // Branche centrale (cœur)
+            const bubbleGrad2 = ctx.createRadialGradient(300, 95, 10, 300, 95, 50);
+            bubbleGrad2.addColorStop(0, '#ec7063');
+            bubbleGrad2.addColorStop(1, '#e74c3c');
+            ctx.fillStyle = bubbleGrad2;
+            ctx.beginPath();
+            ctx.arc(300, 95, 50, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Cœur blanc
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.moveTo(300, 85);
+            ctx.bezierCurveTo(300, 75, 290, 65, 280, 65);
+            ctx.bezierCurveTo(268, 65, 264, 75, 264, 85);
+            ctx.bezierCurveTo(264, 100, 290, 120, 290, 120);
+            ctx.bezierCurveTo(290, 120, 300, 105, 300, 85);
+            ctx.fill();
+            
+            ctx.fillRect(295, 90, 10, 25);
+            ctx.fillRect(287, 98, 26, 10);
+            
+            // Branche droite (croix)
+            const bubbleGrad3 = ctx.createRadialGradient(420, 150, 10, 420, 150, 48);
+            bubbleGrad3.addColorStop(0, '#58d68d');
+            bubbleGrad3.addColorStop(1, '#27ae60');
+            ctx.fillStyle = bubbleGrad3;
+            ctx.beginPath();
+            ctx.arc(420, 150, 48, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(415, 135, 10, 30);
+            ctx.fillRect(405, 145, 30, 10);
+        }
+        
+        // Fonction pour dessiner la fresque 3 - La Main Augmentée
+        function drawFresco3() {
+            const canvas = document.getElementById('canvas3');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 600;
+            canvas.height = 350;
+            
+            // Fond dégradé
+            const bgGrad = ctx.createLinearGradient(0, 0, 600, 350);
+            bgGrad.addColorStop(0, '#ffecd2');
+            bgGrad.addColorStop(1, '#fcb69f');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, 600, 350);
+            
+            // Main
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.strokeStyle = '#3498db';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(200, 280);
+            ctx.lineTo(200, 200);
+            ctx.lineTo(210, 160);
+            ctx.lineTo(220, 200);
+            ctx.lineTo(230, 140);
+            ctx.lineTo(240, 200);
+            ctx.lineTo(250, 145);
+            ctx.lineTo(260, 200);
+            ctx.lineTo(270, 170);
+            ctx.lineTo(280, 210);
+            ctx.lineTo(280, 280);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            // Cercles holographiques
+            ctx.strokeStyle = '#e74c3c';
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.arc(215, 120, 12, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.arc(215, 120, 8, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Croix de visée
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(215, 108);
+            ctx.lineTo(215, 113);
+            ctx.moveTo(215, 127);
+            ctx.lineTo(215, 132);
+            ctx.moveTo(203, 120);
+            ctx.lineTo(208, 120);
+            ctx.moveTo(222, 120);
+            ctx.lineTo(227, 120);
+            ctx.stroke();
+            
+            // Interface de données
+            ctx.fillStyle = 'rgba(52, 152, 219, 0.7)';
+            ctx.beginPath();
+            ctx.roundRect(350, 140, 100, 50, 5);
+            ctx.fill();
+            
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(360, 155);
+            ctx.lineTo(440, 155);
+            ctx.moveTo(360, 170);
+            ctx.lineTo(420, 170);
+            ctx.stroke();
+            
+            ctx.fillStyle = '#27ae60';
+            ctx.beginPath();
+            ctx.arc(370, 155, 3, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Particules
+            ctx.fillStyle = 'rgba(52, 152, 219, 0.6)';
+            ctx.beginPath();
+            ctx.arc(150, 180, 4, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(231, 76, 60, 0.6)';
+            ctx.beginPath();
+            ctx.arc(330, 230, 4, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.fillStyle = 'rgba(39, 174, 96, 0.6)';
+            ctx.beginPath();
+            ctx.arc(300, 90, 4, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        // Fonction pour dessiner la fresque 4 - L'Évolution Architecturale
+        function drawFresco4() {
+            const canvas = document.getElementById('canvas4');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 800;
+            canvas.height = 350;
+            
+            // Fond
+            const bgGrad = ctx.createLinearGradient(0, 0, 800, 0);
+            bgGrad.addColorStop(0, '#fdfbfb');
+            bgGrad.addColorStop(0.5, '#f0f4f8');
+            bgGrad.addColorStop(1, '#ebedee');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, 800, 350);
+            
+            // Pyramide
+            ctx.fillStyle = '#d4a373';
+            ctx.strokeStyle = '#8b7355';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(80, 220);
+            ctx.lineTo(160, 220);
+            ctx.lineTo(120, 130);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            // Architecture romaine
+            ctx.fillStyle = '#c9ada7';
+            ctx.strokeStyle = '#6b5b52';
+            ctx.lineWidth = 2;
+            ctx.fillRect(250, 180, 120, 40);
+            ctx.strokeRect(250, 180, 120, 40);
+            
+            // Colonnes
+            for (let i = 0; i < 5; i++) {
+                ctx.fillStyle = '#a89f91';
+                ctx.fillRect(260 + i * 22, 180, 10, 40);
+            }
+            
+            // Arches
+            ctx.strokeStyle = '#6b5b52';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(288, 180, 20, 0, Math.PI, true);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(332, 180, 20, 0, Math.PI, true);
+            ctx.stroke();
+            
+            // Fronton
+            ctx.fillStyle = '#d4c4ba';
+            ctx.beginPath();
+            ctx.moveTo(250, 180);
+            ctx.lineTo(310, 150);
+            ctx.lineTo(370, 180);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            // Gratte-ciel moderne
+            const modernGrad = ctx.createLinearGradient(480, 120, 480, 220);
+            modernGrad.addColorStop(0, '#3a506b');
+            modernGrad.addColorStop(1, '#1c2541');
+            ctx.fillStyle = modernGrad;
+            ctx.fillRect(460, 120, 60, 100);
+            ctx.strokeStyle = '#1a252f';
+            ctx.strokeRect(460, 120, 60, 100);
+            
+            // Fenêtres
+            for (let row = 0; row < 5; row++) {
+                for (let col = 0; col < 3; col++) {
+                    ctx.fillStyle = 'rgba(52, 152, 219, 0.7)';
+                    ctx.fillRect(468 + col * 16, 130 + row * 18, 10, 12);
+                }
+            }
+            
+            // Structure futuriste
+            ctx.strokeStyle = '#e74c3c';
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.arc(680, 170, 45, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = '#e67e22';
+            ctx.beginPath();
+            ctx.arc(680, 170, 30, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#e74c3c';
+            ctx.beginPath();
+            ctx.moveTo(635, 170);
+            ctx.lineTo(725, 170);
+            ctx.moveTo(680, 125);
+            ctx.lineTo(680, 215);
+            ctx.stroke();
+            
+            // Timeline
+            ctx.strokeStyle = '#34495e';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(60, 270);
+            ctx.lineTo(740, 270);
+            ctx.stroke();
+            
+            // Points sur timeline
+            const timelinePoints = [
+                { x: 120, color: '#d4a373', label: 'ANTIQUE' },
+                { x: 310, color: '#c9ada7', label: 'CLASSIQUE' },
+                { x: 490, color: '#2c3e50', label: 'MODERNE' },
+                { x: 680, color: '#e74c3c', label: 'FUTUR' }
+            ];
+            
+            timelinePoints.forEach(point => {
+                ctx.fillStyle = point.color;
+                ctx.beginPath();
+                ctx.arc(point.x, 270, 5, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.fillStyle = '#34495e';
+                ctx.font = 'bold 12px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(point.label, point.x, 295);
+            });
+        }
+        
+        // Fonction pour dessiner la fresque 5 - La Mécanique Créative
+        function drawFresco5() {
+            const canvas = document.getElementById('canvas5');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 600;
+            canvas.height = 350;
+            
+            // Fond
+            const bgGrad = ctx.createLinearGradient(0, 0, 600, 350);
+            bgGrad.addColorStop(0, '#fff5f5');
+            bgGrad.addColorStop(0.5, '#ffe5d5');
+            bgGrad.addColorStop(1, '#ffd0d0');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, 600, 350);
+            
+            // Fonction pour dessiner un engrenage
+            function drawGear(x, y, radius, teeth, color1, color2) {
+                // Ombre
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+                ctx.beginPath();
+                ctx.arc(x + 5, y + 5, radius, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Corps extérieur
+                ctx.fillStyle = color1;
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Corps intérieur
+                ctx.fillStyle = color2;
+                ctx.beginPath();
+                ctx.arc(x, y, radius * 0.7, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Centre blanc
+                ctx.fillStyle = '#ffffff';
+                ctx.beginPath();
+                ctx.arc(x, y, radius * 0.5, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Centre sombre
+                ctx.fillStyle = '#555';
+                ctx.beginPath();
+                ctx.arc(x, y, radius * 0.25, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Dents
+                ctx.fillStyle = '#555';
+                for (let i = 0; i < teeth; i++) {
+                    const angle = (i * Math.PI * 2) / teeth;
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(angle);
+                    ctx.fillRect(-radius * 0.15, -radius * 1.1, radius * 0.3, radius * 0.25);
+                    ctx.restore();
+                }
+            }
+            
+            // Grand engrenage central (orange)
+            drawGear(300, 175, 80, 12, '#e67e22', '#f39c12');
+            
+            // Engrenage gauche (bleu)
+            drawGear(140, 120, 50, 8, '#3498db', '#5dade2');
+            
+            // Engrenage droite (vert)
+            drawGear(480, 230, 60, 10, '#27ae60', '#52be80');
+            
+            // Lignes de connexion
+            ctx.setLineDash([5, 5]);
+            ctx.strokeStyle = 'rgba(149, 165, 166, 0.5)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(190, 120);
+            ctx.lineTo(230, 150);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(370, 200);
+            ctx.lineTo(420, 220);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            
+            // Boulons décoratifs
+            ctx.fillStyle = '#34495e';
+            ctx.strokeStyle = '#2c3e50';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(80, 280, 8, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.arc(520, 80, 8, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+        }
+        
+        // Fonction pour dessiner la fresque 6 - Le Plan Vivant
+        function drawFresco6() {
+            const canvas = document.getElementById('canvas6');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 600;
+            canvas.height = 350;
+            
+            // Fond avec grille
+            const bgGrad = ctx.createLinearGradient(0, 0, 0, 350);
+            bgGrad.addColorStop(0, '#e0f7fa');
+            bgGrad.addColorStop(1, '#ffffff');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, 600, 350);
+            
+            // Grille
+            ctx.strokeStyle = 'rgba(176, 190, 197, 0.3)';
+            ctx.lineWidth = 0.5;
+            for (let i = 0; i < 600; i += 20) {
+                ctx.beginPath();
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i, 350);
+                ctx.stroke();
+            }
+            for (let i = 0; i < 350; i += 20) {
+                ctx.beginPath();
+                ctx.moveTo(0, i);
+                ctx.lineTo(600, i);
+                ctx.stroke();
+            }
+            
+            // Bâtiment isométrique
+            ctx.strokeStyle = '#1976d2';
+            ctx.lineWidth = 2;
+            
+            // Base (sol)
+            ctx.fillStyle = '#e3f2fd';
+            ctx.beginPath();
+            ctx.moveTo(300, 240);
+            ctx.lineTo(400, 190);
+            ctx.lineTo(400, 140);
+            ctx.lineTo(300, 90);
+            ctx.lineTo(200, 140);
+            ctx.lineTo(200, 190);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            // Mur gauche
+            ctx.fillStyle = '#90caf9';
+            ctx.beginPath();
+            ctx.moveTo(200, 190);
+            ctx.lineTo(200, 140);
+            ctx.lineTo(300, 90);
+            ctx.lineTo(300, 140);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            // Mur droit
+            ctx.fillStyle = '#64b5f6';
+            ctx.beginPath();
+            ctx.moveTo(300, 140);
+            ctx.lineTo(300, 90);
+            ctx.lineTo(400, 140);
+            ctx.lineTo(400, 190);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            
+            // Fenêtres
+            ctx.fillStyle = '#fff59d';
+            ctx.fillRect(320, 150, 20, 20);
+            ctx.strokeRect(320, 150, 20, 20);
+            ctx.fillRect(355, 150, 20, 20);
+            ctx.strokeRect(355, 150, 20, 20);
+            
+            // Cotes
+            ctx.strokeStyle = '#e74c3c';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(400, 140);
+            ctx.lineTo(450, 140);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(450, 130);
+            ctx.lineTo(450, 150);
+            ctx.stroke();
+            
+            ctx.font = '11px Arial';
+            ctx.fillStyle = '#e74c3c';
+            ctx.fillText('8.5m', 455, 145);
+            
+            // Symbole technique (boussole)
+            ctx.strokeStyle = '#27ae60';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(80, 80, 20, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(60, 80);
+            ctx.lineTo(100, 80);
+            ctx.moveTo(80, 60);
+            ctx.lineTo(80, 100);
+            ctx.stroke();
+            
+            // Règle
+            ctx.fillStyle = '#34495e';
+            ctx.fillRect(50, 290, 120, 12);
+            ctx.strokeStyle = '#ecf0f1';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 7; i++) {
+                ctx.beginPath();
+                ctx.moveTo(60 + i * 20, 290);
+                ctx.lineTo(60 + i * 20, 302);
+                ctx.stroke();
+            }
+        }
+        
+        // Dessiner toutes les fresques au chargement
+        window.onload = function() {
+            drawFresco1();
+            drawFresco2();
+            drawFresco3();
+            drawFresco4();
+            drawFresco5();
+            drawFresco6();
+        };
+    </script>
+</body>
+</html>
